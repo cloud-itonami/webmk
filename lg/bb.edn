@@ -1,0 +1,17 @@
+{;; App-scoped babashka project for lg-webmk (Web Marketing Proposal Agent).
+ ;; Clojure/cljc port of the LangGraph Python app per ADR-2606280030
+ ;; (langgraph-python → langgraph-clj). Scoped to this app ONLY — the repo-root
+ ;; bb.edn is untouched. Pins langgraph-clj to the same SHA as the root bb.edn.
+ ;;
+ ;;   bb --config 60-apps/etzhayyim-project-webmk/lg/bb.edn test   ; run the suite
+ ;;   bb --config 60-apps/etzhayyim-project-webmk/lg/bb.edn serve  ; start the XRPC server
+ :paths ["src" "tests"]
+ :deps  {com-junkawasaki/langgraph-clj
+         {:git/url "https://github.com/com-junkawasaki/langgraph-clj"
+          :git/sha "c7daa07d4e50f55d7e2a02e4b89dbeb2b200961d"}}
+ :tasks
+ {test  {:doc "Run the lg-webmk clojure.test suite under bb"
+         :task (load-file "run_tests.clj")}
+  serve {:doc "Start the lg-webmk XRPC/runs HTTP server"
+         :requires ([lg-webmk.server])
+         :task (apply lg-webmk.server/-main *command-line-args*)}}}

@@ -1,0 +1,34 @@
+{
+  "@context": "https://etzhayyim.com/ns/kotodama/v1",
+  "@id": "did:web:webmk.etzhayyim.com",
+  "name": "webmk",
+  "nanoid": "wbmk0001",
+  "runtimeType": "worker",
+  "profile": {
+    "displayName": "ETZHAYYIM Web Marketing",
+    "description": "AI web-marketing proposal agent. Research, competitor analysis, strategy generation, and copy writing — fully automated.",
+    "avatar": "WM",
+    "category": "marketing",
+    "isBot": true,
+    "agentType": "autonomous",
+    "operator": "etzhayyim"
+  },
+  "capabilities": [
+    "agent.invoke",
+    "graph.write",
+    "bpmn-dispatch",
+    "langgraph-loop"
+  ],
+  "triggers": {
+    "subscribeRepos": {
+      "collections": []
+    }
+  },
+  "space": {
+    "name": "ETZHAYYIM Web Marketing",
+    "description": "Marketing proposals and campaign workspace",
+    "joinRule": "invite",
+    "historyVisibility": "invited",
+    "convos": [{ "name": "proposals", "kind": "private", "default": true }]
+  }
+}
