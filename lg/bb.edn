@@ -3,8 +3,10 @@
  ;; (langgraph-python → langgraph-clj). Scoped to this app ONLY — the repo-root
  ;; bb.edn is untouched. Pins langgraph-clj to the same SHA as the root bb.edn.
  ;;
- ;;   bb --config 60-apps/etzhayyim-project-webmk/lg/bb.edn test   ; run the suite
- ;;   bb --config 60-apps/etzhayyim-project-webmk/lg/bb.edn serve  ; start the XRPC server
+ ;; Both tasks resolve their file with a cwd-relative load-file, so run them
+ ;; from this directory:
+ ;;   cd lg && bb --config bb.edn test    ; run the suite
+ ;;   cd lg && bb --config bb.edn serve   ; start the XRPC server
  :paths ["src" "tests"]
  :deps  {com-junkawasaki/langgraph-clj
          {:git/url "https://github.com/com-junkawasaki/langgraph-clj"
@@ -12,6 +14,5 @@
  :tasks
  {test  {:doc "Run the lg-webmk clojure.test suite under bb"
          :task (load-file "run_tests.clj")}
-  serve {:doc "Start the lg-webmk XRPC/runs HTTP server"
-         :requires ([lg-webmk.server])
-         :task (apply lg-webmk.server/-main *command-line-args*)}}}
+  serve {:doc "Start the lg-webmk XRPC/runs HTTP server (LG_PORT, default 8080)"
+         :task (load-file "serve.clj")}}}

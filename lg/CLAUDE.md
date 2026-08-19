@@ -31,7 +31,10 @@ while the router keeps routing back). The clj port preserves the *intent* ("retr
 once") with a terminating gate (always increments; regenerates only while
 `retry_count < 2`).
 
-Run: `bb --config 60-apps/etzhayyim-project-webmk/lg/bb.edn test` (9 tests / 29 assertions green).
+Run: `cd lg && bb --config bb.edn test` (11 tests / 36 assertions green, 2026-08-19).
+The task uses a cwd-relative `load-file`, so it must be run from `lg/`.
+To start the server: `cd lg && bb --config bb.edn serve` -- see
+[`../docs/operator-quickstart.md`](../docs/operator-quickstart.md), which is a walked path.
 
 ## Layout
 
