@@ -22,7 +22,7 @@ Three planes. Only the first one runs today from a clean checkout.
 | Plane | Path | State |
 |---|---|---|
 | **Agent loop** (canonical) | `lg/` | **Runs.** cljc on `langgraph-clj`, `bb` host. 11 tests / 36 assertions green |
-| Edge worker | `appview/webmk-wbmk0001/` | Svelte + Cloudflare Worker config. Not exercised here |
+| Edge worker | `appview/webmk-wbmk0001/` | cljs (reagent + re-frame + jp-go-dds) + Cloudflare Worker config. Not exercised here |
 | kotoba TS package | `kotoba/` | Needs two `git+https` deps from the `etzhayyim` org; `node_modules` is absent and the install is not part of the quickstart |
 
 The agent loop is the canonical implementation. The Python LangGraph app it was
@@ -85,7 +85,7 @@ lg/                        the agent loop — start here
     audit.cljc             fire-and-forget audit emit
     graphs/                the five graphs
   tests/lg_webmk/          smoke suite
-appview/webmk-wbmk0001/    Svelte + Cloudflare Worker
+appview/webmk-wbmk0001/    cljs (reagent + re-frame + jp-go-dds) + Cloudflare Worker
 kotoba/                    TS package (deps not vendored)
 docs/operator-quickstart.md
 CLAUDE.md                  design notes; paths predate the repo extraction
