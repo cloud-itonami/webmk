@@ -13,7 +13,7 @@
   omitted (substrate boundary); thread-state is served from compiled graph state."
   (:require [langgraph.graph :as g]
             [cheshire.core :as json]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [lg-webmk.graphs.health :as health]
             [lg-webmk.graphs.create-proposal :as create-proposal]
             [lg-webmk.graphs.deliver-proposal :as deliver-proposal]
@@ -41,7 +41,7 @@
   (-> (name s)
       (str/replace #"([a-z0-9])([A-Z])" "$1-$2")
       (str/replace #"_" "-")
-      str/lower-case
+      str/lower
       keyword))
 
 (defn- normalize-input [m]
