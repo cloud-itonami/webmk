@@ -10,7 +10,7 @@
   unset), the store is a NO-OP unless WEBMK_STORE_ENABLED=1 (or RW_URL is set as a
   legacy signal). Enabled, it is a real end-to-end store — strictly more functional
   than the unconfigured Python path."
-  (:require #?(:clj [clojure.string :as str])))
+  (:require #?(:clj [kotoba.lang.text :as str])))
 
 (def ^:dynamic *enabled?* false)
 

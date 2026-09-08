@@ -5,7 +5,7 @@
   any failure is logged and swallowed (non-fatal), exactly like the Python.
   Honors LG_AUDIT_DISABLED=1 (the test harness sets it)."
   (:require [cheshire.core :as json]
-            [clojure.string :as str]))
+            [kotoba.lang.text :as str]))
 
 (def default-config
   {:url "http://bpmn-dispatcher.mitama-udf.svc.cluster.local:8080"

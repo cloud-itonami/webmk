@@ -8,7 +8,7 @@
   httpx→babashka.http-client (Resend REST), RW→store seam."
   (:require [langgraph.graph :as g]
             [cheshire.core :as json]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [lg-webmk.audit :as audit]
             [lg-webmk.store :as store]))
 

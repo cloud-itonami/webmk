@@ -16,7 +16,7 @@
   and the router regenerates only while retry_count < 2 — exactly one retry, then
   it proceeds. httpx→babashka.http-client, LLM→Murakumo loopback, RW→store seam."
   (:require [langgraph.graph :as g]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [lg-webmk.audit :as audit]
             [lg-webmk.llm :as llm]
             [lg-webmk.store :as store]))

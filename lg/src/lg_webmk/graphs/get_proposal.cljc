@@ -4,7 +4,7 @@
   NSID: com.etzhayyim.apps.webmk.getProposal
   RW→store seam."
   (:require [langgraph.graph :as g]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [lg-webmk.store :as store]))
 
 (defn fetch [state]

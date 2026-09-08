@@ -6,7 +6,7 @@
   error returns nil so the caller falls back to a deterministic template, exactly
   like the Python try/except graceful fallback."
   (:require [cheshire.core :as json]
-            [clojure.string :as str]))
+            [kotoba.lang.text :as str]))
 
 (def default-config {:url "http://llm.etzhayyim.com" :api-key ""
                      :model "gemma-4-e4b-it" :timeout-ms 30000})
