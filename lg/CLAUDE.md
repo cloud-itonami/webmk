@@ -5,7 +5,7 @@ Web Marketing Proposal Agent. OSS LangGraph FastAPI pattern (mirrors lg-yukkuri)
 ## Clojure port (ADR-2606280030 — langgraph-python → langgraph-clj)
 
 A faithful `langgraph-clj` (babashka) twin of the Python LangGraph app lives under
-`lg/src/lg_webmk/` (+ `lg/tests/`, `lg/bb.edn`, `lg/run_tests.clj`). Same 5 graphs,
+`lg/src/lg_webmk/` (+ `lg/tests/`, `lg/bb.edn`, `lg/run_tests.kotoba`). Same 5 graphs,
 same node topology, same NSID surface. **The clj twin is now the CANONICAL code:
 the DEV-stage Python (`lg/lg_webmk/*.py`) and its python-only scaffolding
 (`pyproject.toml`, `langgraph.json`, `Dockerfile`, `lg/tests/test_smoke.py`) were
