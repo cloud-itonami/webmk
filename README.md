@@ -51,7 +51,7 @@ WebMK portable runtime requires an explicit host adapter
 
 That is not a bug. `src/` is portable `.cljc` and refuses ambient authority — no
 socket, no HTTP client, no store, unless passed in. The two files that hand those
-capabilities over are `lg/serve.clj` (the server) and `lg/run_tests.clj` (the
+capabilities over are `lg/serve.kotoba` (the server) and `lg/run_tests.kotoba` (the
 suite). They are the only places where `org.httpkit.server` and
 `babashka.http-client` are reached. Adding an effect means going through one of
 them, on purpose, where a reviewer will see it.

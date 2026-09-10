@@ -7,7 +7,7 @@
 > removed the monorepo around them); `python -m kotodama.webmk_worker_main` and
 > the LangGraph-Python architecture (the Python was **deleted** under
 > ADR-2606280030 — `lg/` cljc is canonical); RisingWave as the data plane (out of
-> bounds by charter, ADR-2605262130 / 2605312345 — see `lg/src/lg_webmk/store.cljc`).
+> bounds by charter, ADR-2605262130 / 2605312345 — see `lg/src/lg_webmk/store.kotoba`).
 > The NSID surface, the graph topology, and the DID *are* current.
 > The quickstart is a walked path; this file is not.
 
