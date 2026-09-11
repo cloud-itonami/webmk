@@ -1,4 +1,4 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; lg-webmk — host adapter for the XRPC/runs server.
 ;;
 ;;   bb --config bb.edn serve          ; from this directory (lg/)
