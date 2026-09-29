@@ -2,7 +2,7 @@
   "LLM inference via the Murakumo fleet loopback (ADR-2605215000 / 2606172359):
   the LiteLLM gateway (OpenAI-compatible /v1/chat/completions) over
   babashka.http-client — replacing the Python langchain_anthropic / ChatAnthropic.
-  Default model gemma-4-e4b-it (lg/CLAUDE.md). Read-only call, fail-open: any
+  Default model gemma-4-e4b-it (lg/AGENTS.md). Read-only call, fail-open: any
   error returns nil so the caller falls back to a deterministic template, exactly
   like the Python try/except graceful fallback."
   (:require [cheshire.core :as json]
