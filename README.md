@@ -88,7 +88,7 @@ lg/                        the agent loop — start here
 appview/webmk-wbmk0001/    cljs (reagent + re-frame + jp-go-dds) + Cloudflare Worker
 kotoba/                    TS package (deps not vendored)
 docs/operator-quickstart.md
-CLAUDE.md                  design notes; paths predate the repo extraction
+AGENTS.md                  design notes; paths predate the repo extraction
 ```
 
 ## Licence
